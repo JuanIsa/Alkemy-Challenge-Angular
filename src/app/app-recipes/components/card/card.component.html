@@ -1,0 +1,17 @@
+<mat-card class="card-platos">
+    <mat-card-header>
+        <img mat-card-avatar src={{infoRecipe.image}} />
+        <mat-card-title>{{infoRecipe.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{infoRecipe.image}} alt="" class="imgCard">
+    <mat-card-content>
+        <p class="featuresrecipe">
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="recipeDetail(infoRecipe.id)" mat-stroked-button>Ver detalles</button> 
+        <button mat-mini-fab color="warn" class="btnDelete" (click)="removeItem(infoRecipe.id)">
+            <mat-icon>delete</mat-icon>
+        </button> 
+    </mat-card-actions>
+</mat-card>

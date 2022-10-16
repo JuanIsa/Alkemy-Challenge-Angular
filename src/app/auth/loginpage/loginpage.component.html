@@ -1,0 +1,20 @@
+<main id="mainLogin">
+    <h1>Login</h1>
+    <form action="" [formGroup]="loginForm">
+        <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Ingrese su email</mat-label>
+            <input mat-form-field matInput formControlName="email" placeholder="email" type="text">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Ingrese su contraseña</mat-label>
+            <input mat-form-field matInput formControlName="password" placeholder="password" type="password">
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="loginUser()" disabled="{{isLoading}}">Enviar</button>
+    <div *ngIf="isLoading" class="loader__container">
+        <div class="loader">
+        </div>
+    </div>
+</main>

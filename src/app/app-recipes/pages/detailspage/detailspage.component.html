@@ -1,0 +1,14 @@
+<app-header></app-header>
+<main id="maindetail">
+    <h2>{{detailRecipe.title}}</h2>
+    <h3>Id de plato: {{id}}</h3>
+    <img src="{{detailRecipe.image}}" alt="">
+    <p>Tiempo de preparación: {{detailRecipe.readyInMinutes}} min.</p>
+    <p>Puntaje saludable: {{detailRecipe.healthScore}}</p>
+    <p>Precio del plato: U$S {{detailRecipe.pricePerServing}}</p>
+    <p>Vegano:{{detailRecipe.vegan}}</p>
+    <hr/>
+    <h3>Precio total del Menú: {{dataGeneralState?.totalPrice| currency: 'U$S '}}</h3>
+    <h3>Tiempo promedio total de los platos: {{dataGeneralState?.averageTime|number: '.0-2'}} min.</h3>
+    <h3>Health Score promedio de todos los platos: {{dataGeneralState?.averageHealthScore|number: '.0-2'}}</h3>
+</main>

@@ -1,0 +1,13 @@
+<div id="searchcontainer">
+    <p>Búsqueda reactiva de platos. (borrar el campo para despejar resultados)</p>
+    <form action="" [formGroup]="searchForm">
+        <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Búsque de platos</mat-label>
+            <input mat-form-field matInput formControlName="searchInput" placeholder="Platillos del menú" type="text">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </form>
+</div>
+<div id="dgrid">
+  <app-cardgrid *ngFor="let item of searchLocalData" [infoCard]="item"></app-cardgrid>
+</div>

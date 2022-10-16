@@ -1,0 +1,13 @@
+<app-header></app-header>
+<main>
+    <h1>Homepage</h1>
+    <app-search-recipes></app-search-recipes>
+    <div *ngIf="recipesList?.length">
+        <h3>Precio total del Menú: {{dataGeneralState?.totalPrice| currency: 'U$S '}}</h3>
+        <h3>Tiempo promedio total de los platos: {{dataGeneralState?.averageTime|number: '.0-2'}} min.</h3>
+        <h3>Health Score promedio de todos los platos: {{dataGeneralState?.averageHealthScore|number: '.0-2'}}</h3>
+    </div>
+    <div id="platosContainer">
+        <app-card *ngFor="let recipe of recipesList;let i=index" [infoRecipe]="recipe" [cont]="i"></app-card>
+    </div>
+</main>
